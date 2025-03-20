@@ -30,7 +30,7 @@ h2,h3,h4{
     color: yello ;
     font-size: 5rwem;
     border: 14px solid blue;
-    box-shadow: green;
+    /* box-shadow: green; */
     /* background: radial-gradient(circle, blue, white); */
     box-shadow: 10px 10px 5px rgb(13, 231, 213);
 }
