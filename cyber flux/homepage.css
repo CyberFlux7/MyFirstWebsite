@@ -1,0 +1,362 @@
+/* Base styles */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #536976; /* fallback color */
+    background: -webkit-linear-gradient(to right, #292E49, #536976); /* for Safari */
+    background: linear-gradient(to right, #292E49, #536976); /* standard */
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar styles */
+  header {
+    background-color: rgb(7, 6, 6);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+  }
+  
+  .navbar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #eceef2;
+    margin: 0;
+  }
+  
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .main-nav a {
+    text-decoration: none;
+    color: #c9bebe;
+    transition: color 0.3s ease;
+  }
+  
+  .main-nav a:hover {
+    color: #141414;
+  }
+  
+  .main-nav a.active {
+    color: #2563eb;
+    font-weight: 600;
+  }
+  
+  /* Hero Slider */
+  .hero {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+  }
+  
+  .hero-slider {
+    position: relative;
+    height: 100%;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(11, 11, 11, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .slide-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .slide-content p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  .btn-about {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-about:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* Slider Timer */
+  .slider-timer-container {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 3;
+  }
+  
+  .slider-timer {
+    height: 100%;
+    width: 0;
+    background-color: white;
+    transition: width linear;
+  }
+  
+  /* Slider navigation */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .prev {
+    left: 20px;
+  }
+  
+  .next {
+    right: 20px;
+  }
+  
+  /* Slider dots */
+  .slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: white;
+  }
+  
+  /* Fade animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+  }
+  
+  /* Featured Cars Section */
+  .featured-cars {
+    padding: 4rem 0;
+  }
+  /* Clickable Car Cards */
+.car-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    text-decoration: none;
+    display: block;
+    border: 2px solid transparent; /* Add transparent border initially */
+  }
+  
+  .car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    border-color: #2563eb; /* Change border to blue on hover */
+  }
+  
+  /* If you want all cards to have blue border all the time (not just on hover) */
+  /* 
+  .car-card {
+    border: 2px solid #2563eb;
+  }
+  */
+  .container {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .featured-cars h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  
+  .car-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .car-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Clickable Car Cards */
+  .car-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .car-image {
+    overflow: hidden;
+  }
+  
+  .car-card img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .car-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .car-details {
+    padding: 1rem;
+    position: relative;
+  }
+  
+  .car-details h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: #333;
+  }
+  
+  .car-description {
+    color: #666;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .car-price {
+    color: #2563eb;
+    font-weight: 700;
+    margin: 0.5rem 0 1.5rem 0;
+  }
+  
+  .view-details {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: #2563eb;
+    font-size: 0.875rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .car-card:hover .view-details {
+    opacity: 1;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero {
+      height: 450px;
+    }
+    
+    .slide-content h2 {
+      font-size: 1.8rem;
+    }
+    
+    .slide-content p {
+      font-size: 1rem;
+    }
+  }
+  /* Clickable Car Cards */
+.car-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3); /* Blue shadow with slight transparency */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    text-decoration: none;
+    display: block;
+    border: 2px solid transparent; /* Keep the transparent border we added earlier */
+  }
+  
+  .car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.5); /* Stronger blue shadow on hover */
+    border-color: #2563eb; /* Keep the blue border on hover */
+  }

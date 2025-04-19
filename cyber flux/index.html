@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    .car-container {div class="bg-white rounded-xl shadow-md overflow-hidden">
+    <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/M5-2025/11821/1719462197562/front-left-side-47.jpg?tr=w-664" alt="Car 1" class="w-full h-48 object-cover">
+    <div class="p-4">
+      <h4 class="text-xl font-semibold">2022 BMW M4 </h4>
+      <p class="text-gray-600">Low mileage, like new condition</p>
+      <p class="text-blue-600 font-bold mt-2">$64,000</p>
+    </div>
+    <div> 
+    </div>
+  </div>
+       
+  <style>display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+        gap: 20px; /* Adds space between the cards */
+        margin: 20px;
+  </style>  }
+    
+    .car-card {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .car-container .car-card:nth-child(4) {
+        grid-column: 1; /* Places the 4th card in the first column */
+        grid-row: 2; /* Places the 4th card in the second row */
+    }
+    
+</body>
+</html>

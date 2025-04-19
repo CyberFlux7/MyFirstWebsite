@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DriveNow - Home</title>
+  <link rel="stylesheet" href="homepage.css">
+  <script src="homepage.js" defer></script>
+
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="navbar-container">
+      <h1 class="logo">DriveNow</h1>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section with Image Slider -->
+  <section class="hero">
+    <div class="hero-slider">
+      <div class="slide fade">
+        <img src="https://wallpaperaccess.com/full/42412.jpg" alt="Luxury Car 1">
+        <div class="slide-content">
+          <h2>Find Your Dream Car Today</h2>
+          <p>Browse our selection of premium new and used vehicles.</p>
+          <a href="inventory.html" class="btn-about">About US</a>
+        </div>
+      </div>
+      
+      <div class="slide fade">
+        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Luxury Car 2">
+        <div class="slide-content">
+          <h2>Premium Selection</h2>
+          <p>Experience luxury and performance like never before.</p>
+          <a href="inventory.html" class="btn-about">View Inventory</a>
+        </div>
+      </div>
+      
+      <div class="slide fade">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Luxury Car 3">
+        <div class="slide-content">
+          <h2>Exclusive Deals</h2>
+          <p>Special offers on our most prestigious vehicles.</p>
+          <a href="contact.html" class="btn-about">Contact Us</a>
+        </div>
+      </div>
+      
+      <!-- Slider navigation -->
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+      
+      <!-- Timer bar -->
+      <div class="slider-timer-container">
+        <div class="slider-timer"></div>
+      </div>
+      
+      <!-- Dots/indicators -->
+      <div class="slider-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Cars Section -->
+  <section class="featured-cars">
+    <div class="container">
+      <h3>Best Sellers</h3>
+      <div class="car-grid">
+        
+        <!-- Car Card 1 -->
+        <a href="car-details.html?id=1" class="car-card">
+          <div class="car-image">
+            <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/M5-2025/11821/1719462197562/front-left-side-47.jpg?tr=w-664" alt="Car 1">
+          </div>
+          <div class="car-details">
+            <h4>2022 BMW M4</h4>
+            <p class="car-description">Low mileage, like new condition</p>
+            <p class="car-price">$64,000</p>
+            <span class="view-details">View Details</span>
+          </div>
+        </a>
+  
+        <!-- Car Card 2 -->
+        <a href="car-details.html?id=2" class="car-card">
+          <div class="car-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2dj7NEfqCFnRkpU86gVkwzgj1OhrJl5_SCg&s" alt="Car 2">
+          </div>
+          <div class="car-details">
+            <h4>2021 G Wagon</h4>
+            <p class="car-description">Fuel efficient, sporty design</p>
+            <p class="car-price">$200,500</p>
+            <span class="view-details">View Details</span>
+          </div>
+        </a>
+
+        <!-- Car Card 3 -->
+        <a href="car-details.html?id=3" class="car-card">
+          <div class="car-image">
+            <img src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMHIspbWvanYb%255y%25oq%25vSTmjMXD4qAZeoNBPUSfUx4RmHlCgI7Zl2dioCLafQDcFGDTMYnfurnN65yPewFb2CvNzxUGqA7fQrmeOJUPYDImTB8VuyY0oVk0DBRl2vzpQNqjdtAsvyJ5I" alt="Car 3">
+          </div>
+          <div class="car-details">
+            <h4>2024 Porsche 911</h4>
+            <p class="car-description">Sporty look, best seller</p>
+            <p class="car-price">$84,999</p>
+            <span class="view-details">View Details</span>
+          </div>
+        </a>
+
+        <!-- Car Card 4 -->
+        <a href="car-details.html?id=4" class="car-card">
+          <div class="car-image">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/phantom-scintilla-private-collection-0-1-66b50a5eddd44.jpg?crop=0.832xw:0.832xh;0.0849xw,0.168xh&resize=1200:*" alt="Car 4">
+          </div>
+          <div class="car-details">
+            <h4>2024 RR Phantom</h4>
+            <p class="car-description">Luxury design, best seller</p>
+            <p class="car-price">$999,999</p>
+            <span class="view-details">View Details</span>
+          </div>
+        </a>
+    
+        <!-- Car Card 5 -->
+        <a href="car-details.html?id=5" class="car-card">
+          <div class="car-image">
+            <img src="https://cars.bonhams.com/_next/image.jpg?url=https%3A%2F%2Fimg1.bonhams.com%2Fimage%3Fsrc%3DImages%2Flive%2F2022-09%2F22%2F25259814-2-35.jpg%26left%3D0.060000000000%26right%3D0.950000000000&w=2400&q=75" alt="Car 5">
+          </div>
+          <div class="car-details">
+            <h4>2023 Lamborghini Aventador</h4>
+            <p class="car-description">Luxury design, best seller</p>
+            <p class="car-price">$79,999</p>
+            <span class="view-details">View Details</span>
+          </div>
+        </a>
+
+        <!-- Car Card 6 -->
+        <a href="car-details.html?id=6" class="car-card">
+          <div class="car-image">
+            <img src="https://newsroom.cdn.bugatti-media.com/32524eff-039d-4712-b276-f3c332dcf9bd/xl" alt="Car 6">
+          </div>
+          <div class="car-details">
+            <h4>2023 Bugatti Chiron</h4>
+            <p class="car-description">Luxury design, The fastest</p>
+            <p class="car-price">$3,300,000</p>
+            <span class="view-details">View Details</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="slider.js"></script>
+</body>
+</html>
